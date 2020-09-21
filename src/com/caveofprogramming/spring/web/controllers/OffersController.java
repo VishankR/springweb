@@ -5,7 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -56,7 +56,7 @@ public class OffersController {
 			}
 		}
 		else {
-			System.out.println("Form has been validated.");
+			offersService.createOffer(offer);
 		}
 		return"OfferCreated";
 	}
