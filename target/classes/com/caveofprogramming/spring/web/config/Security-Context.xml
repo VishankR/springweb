@@ -9,10 +9,8 @@
 	<security:authentication-manager>
 		<security:authentication-provider>
 			
-		<security:user-service>
-			<security:user name="vishank" authorities="admin"
-				password="vishank@1" />
-		</security:user-service>
+		
+		<security:jdbc-user-service data-source-ref="datasource" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 	<security:http use-expressions="true">
